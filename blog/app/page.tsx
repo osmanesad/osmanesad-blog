@@ -8,7 +8,7 @@ export default function Home() {
       <header className="flex justify-between items-center mb-12">
         <div className="text-xl font-bold">☕</div>
         <button className="bg-black text-white px-4 py-1 rounded-full text-sm">
-          Remix
+          Mason Dase
         </button>
       </header>
 
@@ -17,7 +17,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">
           Hello, <br />
           I’m Osman and I love to{" "}
-          <span className="text-yellow-500">write, code, and draw.</span>
+          <span className="text-green-400">write, code, and draw.</span>
         </h1>
         <p className="text-lg text-gray-600">
           My passion lies at the intersection of creativity and technology—
@@ -57,9 +57,7 @@ export default function Home() {
       <section className="mb-16">
         <h2 className="uppercase text-xs text-gray-500 mb-2">About</h2>
         <p className="text-gray-700">
-          I’m currently building personal tools and writing about ideas that
-          combine aesthetics and function. Previously studied finance, now
-          focused on design and technology.
+        I continue my personal development by gaining knowledge and experience in business management, customer satisfaction, marketing, sales, and entrepreneurship. My goal is to specialize in these fields and establish a successful business of my own.
         </p>
       </section>
 
@@ -67,29 +65,35 @@ export default function Home() {
       <section className="mb-16">
         <h2 className="uppercase text-xs text-gray-500 mb-2">Blog</h2>
         <div className="space-y-4">
-          {[
-            {
-              date: "12 JUN 2025",
-              title: "Why I Document Everything",
-              tag: "Writing",
-            },
-            {
-              date: "03 JUN 2025",
-              title: "Drawing as Mindfulness",
-              tag: "Art",
-            },
-            {
-              date: "24 MAY 2025",
-              title: "My Favorite Python Snippets",
-              tag: "Code",
-            },
-          ].map((post, i) => (
+          {[{
+            date: '16 MART 2025',
+            title: 'Unutmak',
+            tag: 'Writing',
+            url: 'https://medium.com/@osmanesad/unutmak-f3d26ea1dba6'
+          },
+          {
+            date: '05 MART 2025',
+            title: 'bad dogs',
+            tag: 'Art',
+            url: 'https://www.artstation.com/artwork/4Ndz6W'
+          },
+          {
+            date: '26 MART 2025',
+            title: 'kitap_stok_takip_py',
+            tag: 'Code',
+            url: 'https://github.com/osmanesad/kitap_stok_takip_py'
+          }].map((post, i) => (
             <div key={i} className="flex justify-between text-sm">
               <span className="text-gray-500 w-32">{post.date}</span>
-              <span className="flex-1">{post.title}</span>
-              <span className="text-xs px-2 py-0.5 bg-gray-200 rounded-full">
-                {post.tag}
-              </span>
+              <a
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 hover:underline"
+              >
+                {post.title}
+              </a>
+              <span className="text-xs px-2 py-0.5 bg-gray-200 rounded-full">{post.tag}</span>
             </div>
           ))}
         </div>
@@ -97,12 +101,13 @@ export default function Home() {
 
       {/* Contact */}
       <footer className="text-sm text-gray-500">
-        <p className="mb-2">info@osmanesad.com</p>
+        <p className="mb-2">info@pagebrew.co</p>
         <div className="flex gap-4">
-          <Link href="#">Instagram</Link>
-          <Link href="#">GitHub</Link>
-          <Link href="#">Dribbble</Link>
-          <Link href="#">LinkedIn</Link>
+          <Link href="https://www.instagram.com/masondase/">Instagram</Link>
+          <Link href="https://github.com/osmanesad">GitHub</Link>
+          <Link href="https://www.behance.net/osmanesad">Behance</Link>
+          <Link href="https://www.linkedin.com/in/osmanesad/">LinkedIn</Link>
+          <Link href="https://www.pinterest.com/g0324d/">Pinterest</Link>
         </div>
       </footer>
     </main>
